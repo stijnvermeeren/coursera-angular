@@ -4,7 +4,7 @@
 angular.module('ShoppingListCheckOff', [])
   .controller('ToBuyController', ToBuyController)
   .controller('AlreadyBoughtController', AlreadyBoughtController)
-  .service('ShoppingListCheckOffService', ShoppingListCheckOffService)
+  .service('ShoppingListCheckOffService', ShoppingListCheckOffService);
 
 function ShoppingListCheckOffService() {
   var service = this;
