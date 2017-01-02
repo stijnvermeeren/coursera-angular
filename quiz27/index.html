@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Directive scope test</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+<body ng-app="ScopeTest">
+  <div ng-controller="ScopeTestController as scopeTest">
+    <default-directive></default-directive>
+    <true-directive></true-directive>
+    <false-directive></false-directive>
+  </div>
+</body>
+</html>
