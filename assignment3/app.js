@@ -40,7 +40,7 @@
       })
       .then(function(response) {
         return response.data.menu_items.filter(function(item) {
-          return (item.name.toLowerCase().indexOf(searchTerm) !== -1);
+          return (item.description.toLowerCase().indexOf(searchTerm) !== -1);
         });
       });
     }
