@@ -1,0 +1,5 @@
+<h2>{{$ctrl.category.name}}</h2>
+<div ng-if="$ctrl.category.special_instructions">{{$ctrl.category.special_instructions}}</div>
+<ul>
+  <li ng-repeat="item in $ctrl.items">{{item.name}}</li>
+</ul>

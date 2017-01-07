@@ -21,5 +21,19 @@
         }]
       }
     });
+
+    $stateProvider.state('items', {
+      url: '/items/{categoryId}',
+      templateUrl: 'src/menuapp/states/items/items.template.html',
+      controller: 'ItemsController as items',
+      resolve: {
+        data: [
+          'MenuDataService', '$stateParams',
+          function (MenuDataService, $stateParams) {
+            return MenuDataService.getItemsForCategory($stateParams.categoryId);
+          }
+        ]
+      }
+    });
   }
 })();
