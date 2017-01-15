@@ -1,0 +1,11 @@
+<div class="container">
+  <h2 class="text-center">My Info</h2>
+
+  <div ng-if="myInfoCtrl.myInfo">
+    {{myInfoCtrl.myInfo.firstName}} {{myInfoCtrl.myInfo.lastName}}
+  </div>
+
+  <div ng-if="!myInfoCtrl.myInfo">
+    Not Signed Up Yet. <a ui-sref="public.sign-up">Sign up Now!</a>
+  </div>
+</div>

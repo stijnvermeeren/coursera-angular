@@ -200,3 +200,14 @@ a[ui-sref="admin.auth"] {
   }
   /* End Header */
 }
+
+
+
+
+form {
+  color: black;
+}
+form span.invalid {
+  color: red;
+  padding-left: 1em;
+}

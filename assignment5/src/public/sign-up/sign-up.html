@@ -1,0 +1,43 @@
+<div class="container">
+  <h2 class="text-center">Sign Up</h2>
+
+  <form name='signUpForm' novalidate>
+    <input type="text" name="firstName" placeholder="First name"
+           ng-model="signUpCtrl.myInfo.firstName"
+           required />
+    <span class="invalid" ng-if="signUpForm.firstName.$invalid && signUpForm.firstName.$touched">
+      First name is required.
+    </span>
+    <br />
+    <input type="text" name="lastName" placeholder="Last name"
+           ng-model="signUpCtrl.myInfo.lastName"
+           required />
+    <span class="invalid" ng-if="signUpForm.lastName.$invalid && signUpForm.lastName.$touched">
+      Last name is required.
+    </span>
+    <br />
+    <input type="email" name="emailAddress" placeholder="Email address"
+           ng-model="signUpCtrl.myInfo.emailAddress"
+           required />
+    <span class="invalid" ng-if="signUpForm.emailAddress.$invalid && signUpForm.emailAddress.$touched">
+      Email address must be valid.
+    </span>
+    <br />
+    <input type="text" name="phoneNumber" placeholder="Phone number"
+           ng-model="signUpCtrl.myInfo.phoneNumber"
+           required />
+    <span class="invalid" ng-if="signUpForm.firstName.$invalid && signUpForm.firstName.$touched">
+      Phone number is required.
+    </span>
+    <br />
+    <input type="text" name="favoriteDish" placeholder="Favorite dish (menu number)"
+           ng-model="signUpCtrl.myInfo.favoriteDish"
+           required />
+    <span class="invalid" ng-if="signUpForm.firstName.$invalid && signUpForm.firstName.$touched">
+      Favorite dish is required.
+    </span>
+    <br />
+    <button ng-click="signUpCtrl.submit()" ng-disabled="signUpForm.$invalid">Submit</button>
+  </form>
+
+</div>
