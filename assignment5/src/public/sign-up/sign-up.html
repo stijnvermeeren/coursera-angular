@@ -23,21 +23,26 @@
       Email address must be valid.
     </span>
     <br />
-    <input type="text" name="phoneNumber" placeholder="Phone number"
+    <input type="text" name="phoneNumber" placeholder="Phone number (###-###-####)"
            ng-model="signUpCtrl.myInfo.phoneNumber"
-           required />
-    <span class="invalid" ng-if="signUpForm.firstName.$invalid && signUpForm.firstName.$touched">
-      Phone number is required.
+           pattern="(\d{3})-(\d{3})-(\d{4})" />
+    <span class="invalid" ng-if="signUpForm.phoneNumber.$invalid && signUpForm.phoneNumber.$touched">
+      Phone number must be empty or in the format ###-###-####.
     </span>
     <br />
     <input type="text" name="favoriteDish" placeholder="Favorite dish (menu number)"
            ng-model="signUpCtrl.myInfo.favoriteDish"
            required />
-    <span class="invalid" ng-if="signUpForm.firstName.$invalid && signUpForm.firstName.$touched">
+    <span class="invalid" ng-if="signUpForm.favoriteDish.$invalid && signUpForm.favoriteDish.$touched">
       Favorite dish is required.
+    </span>
+    <span class="invalid" ng-if="signUpCtrl.favoriteDishInvalid">
+      No such menu number exists.
     </span>
     <br />
     <button ng-click="signUpCtrl.submit()" ng-disabled="signUpForm.$invalid">Submit</button>
+    <br />
+    <span class="confirmation" ng-if="signUpCtrl.saved">Your information has been saved.</span>
   </form>
 
 </div>

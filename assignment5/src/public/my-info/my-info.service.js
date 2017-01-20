@@ -8,14 +8,17 @@
   function MyInfoService() {
     var service = this;
 
-    var myInfo = undefined;
+    var info = undefined;
 
-    service.setInfo = function(info) {
-      myInfo = info;
+    service.setInfo = function(myInfo, favoriteDishData) {
+      info = {
+        myInfo: myInfo,
+        favoriteDishData: favoriteDishData
+      };
     };
 
     service.getInfo = function() {
-      return myInfo;
+      return info;
     };
   }
 

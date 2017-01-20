@@ -211,3 +211,10 @@ form span.invalid {
   color: red;
   padding-left: 1em;
 }
+form span.confirmation {
+  color: green;
+  font-weight: bold;
+}
+form input {
+  width: 15em;
+}
